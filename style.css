@@ -1,0 +1,161 @@
+ /* Reset & Import Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Container Utama - Centered Position secara Vertikal & Horizontal */
+        body {
+            background: linear-gradient(135deg, #0f0c20, #1a103c, #0d1b2a);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Kartu Pemutar Musik */
+        .music-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* 1. Header */
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .album-art {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            background: linear-gradient(45deg, #ff007f, #7928ca);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            box-shadow: 0 8px 20px rgba(255, 0, 127, 0.3);
+            animation: pulse 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        .song-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .artist-name {
+            font-size: 0.95rem;
+            color: #a0a0c0;
+            font-weight: 300;
+        }
+
+        /* 2. Musik Player */
+        .audio-player {
+            margin-bottom: 25px;
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            outline: none;
+            filter: invert(100%) hue-rotate(180deg) opacity(0.85);
+            /* Styling default audio player */
+        }
+
+        /* Divider Line */
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* 3. Teks Lagu (Lirik) */
+        .lyrics-section {
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 8px;
+            text-align: center;
+        }
+
+        .lyrics-section h3 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: #ff007f;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .lyrics-text {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #d1d1e0;
+            font-weight: 300;
+        }
+
+        .lyrics-text p.active {
+            color: #00f2fe;
+            font-weight: 600;
+        }
+
+        /* Scrollbar Custom untuk Lirik */
+        .lyrics-section::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .lyrics-section::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        .audio-player h4 {
+            margin-bottom: 6px;
+        }
+
+        /* Responsif untuk Layar Kecil (Mobile) */
+        @media (max-width: 480px) {
+            .music-card {
+                padding: 20px;
+            }
+
+            .album-art {
+                width: 110px;
+                height: 110px;
+                font-size: 40px;
+            }
+
+            .song-title {
+                font-size: 1.25rem;
+            }
+
+            .lyrics-text {
+                font-size: 0.85rem;
+            }
+        }
