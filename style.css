@@ -99,7 +99,7 @@
 
         /* 3. Teks Lagu (Lirik) */
         .lyrics-section {
-            max-height: 200px;
+            max-height: 800px;
             overflow-y: auto;
             padding-right: 8px;
             text-align: center;
